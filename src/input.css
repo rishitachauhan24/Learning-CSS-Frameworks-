@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Custom Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-900 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus {
+    @apply outline-none ring-2 ring-brand-secondary ring-offset-2;
+  }
+}
+
+/* Custom Component Classes */
+@layer components {
+  /* Button Styles */
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 focus:ring-2 focus:ring-offset-2 inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-brand-secondary text-white hover:bg-blue-600 focus:ring-brand-secondary shadow-md hover:shadow-lg;
+  }
+
+  .btn-accent {
+    @apply bg-brand-accent text-white hover:bg-orange-600 focus:ring-brand-accent shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-brand-secondary text-brand-secondary hover:bg-brand-secondary hover:text-white focus:ring-brand-secondary;
+  }
+
+  .btn-ghost {
+    @apply text-brand-secondary hover:bg-blue-50 focus:ring-brand-secondary;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  /* Input Styles */
+  .input {
+    @apply w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-brand-secondary focus:ring-brand-secondary transition-colors;
+  }
+
+  .input-error {
+    @apply border-danger focus:border-danger focus:ring-danger;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .badge-primary {
+    @apply bg-blue-100 text-brand-secondary;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-success;
+  }
+
+  .badge-warning {
+    @apply bg-amber-100 text-warning;
+  }
+
+  .badge-danger {
+    @apply bg-red-100 text-danger;
+  }
+
+  /* Section Styles */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-dark {
+    @apply bg-brand-primary text-white;
+  }
+
+  .section-light {
+    @apply bg-brand-light;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-gray-700 hover:text-brand-secondary transition-colors duration-200 font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-brand-secondary;
+  }
+
+  /* Feature Card */
+  .feature-card {
+    @apply p-8 rounded-xl bg-white shadow-md hover:shadow-brand-lg transition-all duration-300 border border-gray-100;
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    @apply p-6 rounded-xl bg-white shadow-md border-l-4 border-brand-accent;
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-secondary to-brand-accent bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-brand {
+    @apply bg-gradient-to-r from-brand-secondary to-brand-accent;
+  }
+
+  .bg-gradient-dark {
+    @apply bg-gradient-to-br from-brand-primary to-brand-dark;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "techvista-brand-website",
+  "version": "1.0.0",
+  "description": "A responsive website built with TailwindCSS featuring custom brand styling",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": ["tailwindcss", "responsive", "accessibility", "css-framework"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

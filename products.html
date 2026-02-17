@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore TechVista's innovative products and solutions for your business">
+    <title>Products - TechVista | Our Solutions & Services</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 transition-all duration-300">
+        <div class="container-custom">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-2" aria-label="TechVista Home">
+                        <div class="w-10 h-10 bg-gradient-brand rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">TV</span>
+                        </div>
+                        <span class="text-2xl font-bold text-brand-primary">TechVista</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="products.html" class="nav-link nav-link-active" aria-current="page">Products</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <button 
+                    onclick="toggleMobileMenu()" 
+                    class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:ring-2 focus:ring-brand-secondary"
+                    aria-label="Toggle mobile menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <svg id="hamburger" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="container-custom py-4 space-y-4">
+                <a href="index.html" class="block nav-link py-2">Home</a>
+                <a href="about.html" class="block nav-link py-2">About</a>
+                <a href="products.html" class="block nav-link nav-link-active py-2">Products</a>
+                <a href="contact.html" class="block nav-link py-2">Contact</a>
+                <a href="contact.html" class="btn btn-primary w-full">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section pt-32 bg-gradient-to-br from-brand-light to-white">
+        <div class="container-custom text-center">
+            <div class="max-w-4xl mx-auto animate-on-scroll">
+                <span class="badge badge-primary mb-4">Our Products</span>
+                <h1 class="text-brand-primary mb-6">
+                    Solutions That Drive <span class="text-gradient">Success</span>
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Discover our comprehensive suite of products designed to elevate your business to new heights.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section-light py-8">
+        <div class="container-custom">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="filterProducts('all')" class="btn btn-primary filter-btn">
+                    All Products
+                </button>
+                <button onclick="filterProducts('web')" class="btn btn-ghost filter-btn">
+                    Web Solutions
+                </button>
+                <button onclick="filterProducts('mobile')" class="btn btn-ghost filter-btn">
+                    Mobile Apps
+                </button>
+                <button onclick="filterProducts('cloud')" class="btn btn-ghost filter-btn">
+                    Cloud Services
+                </button>
+                <button onclick="filterProducts('analytics')" class="btn btn-ghost filter-btn">
+                    Analytics
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="section section-light">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Product 1 -->
+                <div class="card product-card animate-on-scroll" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
+                         alt="Dashboard Analytics Interface" 
+                         class="w-full h-48 object-cover">
+                    <div class="card-body">
+                        <span class="badge badge-primary mb-3">Web Solutions</span>
+                        <h3 class="text-brand-primary mb-3">Enterprise Dashboard</h3>
+                        <p class="text-gray-600 mb-6">
+                            Powerful analytics dashboard with real-time data visualization and comprehensive reporting tools.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-bold text-brand-primary">$499</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Real-time analytics
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Custom reports
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                API integration
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-full">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card product-card animate-on-scroll animation-delay-200" data-category="mobile">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" 
+                         alt="Mobile App Development" 
+                         class="w-full h-48 object-cover">
+                    <div class="card-body">
+                        <span class="badge badge-success mb-3">Mobile Apps</span>
+                        <h3 class="text-brand-primary mb-3">Mobile Suite Pro</h3>
+                        <p class="text-gray-600 mb-6">
+                            Cross-platform mobile application development with native performance and seamless user experience.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-bold text-brand-primary">$799</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                iOS & Android
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Push notifications
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Offline support
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-full">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card product-card animate-on-scroll animation-delay-400" data-category="cloud">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop" 
+                         alt="Cloud Infrastructure" 
+                         class="w-full h-48 object-cover">
+                    <div class="card-body">
+                        <span class="badge badge-warning mb-3">Cloud Services</span>
+                        <h3 class="text-brand-primary mb-3">Cloud Infrastructure</h3>
+                        <p class="text-gray-600 mb-6">
+                            Scalable cloud infrastructure with automated deployment, monitoring, and disaster recovery.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-bold text-brand-primary">$299</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Auto-scaling
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                99.9% uptime
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                24/7 monitoring
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-full">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="card product-card animate-on-scroll" data-category="analytics">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+                         alt="Data Analytics" 
+                         class="w-full h-48 object-cover">
+                    <div class="card-body">
+                        <span class="badge badge-danger mb-3">Analytics</span>
+                        <h3 class="text-brand-primary mb-3">Data Analytics Pro</h3>
+                        <p class="text-gray-600 mb-6">
+                            Advanced data analytics platform with machine learning capabilities and predictive insights.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-bold text-brand-primary">$599</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                ML algorithms
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Predictive modeling
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Data visualization
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-full">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="card product-card animate-on-scroll animation-delay-200" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop" 
+                         alt="E-commerce Platform" 
+                         class="w-full h-48 object-cover">
+                    <div class="card-body">
+                        <span class="badge badge-primary mb-3">Web Solutions</span>
+                        <h3 class="text-brand-primary mb-3">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-6">
+                            Complete e-commerce solution with inventory management, payment processing, and analytics.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-bold text-brand-primary">$899</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Product catalog
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Payment gateway
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Order tracking
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-full">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="card product-card animate-on-scroll animation-delay-400" data-category="mobile">
+                    <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=600&h=400&fit=crop" 
+                         alt="Enterprise Communication" 
+                         class="w-full h-48 object-cover">
+                    <div class="card-body">
+                        <span class="badge badge-success mb-3">Mobile Apps</span>
+                        <h3 class="text-brand-primary mb-3">Team Collaboration</h3>
+                        <p class="text-gray-600 mb-6">
+                            Enterprise communication platform with video conferencing, chat, and project management.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-bold text-brand-primary">$399</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Video calls
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                File sharing
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Task management
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary w-full">Get Started</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Comparison Section -->
+    <section class="section">
+        <div class="container-custom">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-brand-primary mb-4 ">Why Choose Our Products?</h2>
+                <p class="text-xl text-gray-600">
+                    Industry-leading features that set us apart from the competition.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="feature-card text-center animate-on-scroll">
+                    <div class="w-14 h-14 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-brand-primary mb-2">Blazing Fast</h4>
+                    <p class="text-gray-600 text-sm">
+                        Optimized performance for lightning-fast response times
+                    </p>
+                </div>
+
+                <div class="feature-card text-center animate-on-scroll animation-delay-200">
+                    <div class="w-14 h-14 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-brand-primary mb-2">Secure</h4>
+                    <p class="text-gray-600 text-sm">
+                        Enterprise-grade security with end-to-end encryption
+                    </p>
+                </div>
+
+                <div class="feature-card text-center animate-on-scroll animation-delay-400">
+                    <div class="w-14 h-14 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-brand-primary mb-2">Customizable</h4>
+                    <p class="text-gray-600 text-sm">
+                        Fully flexible to match your unique requirements
+                    </p>
+                </div>
+
+                <div class="feature-card text-center animate-on-scroll animation-delay-600">
+                    <div class="w-14 h-14 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-brand-primary mb-2">24/7 Support</h4>
+                    <p class="text-gray-600 text-sm">
+                        Round-the-clock assistance from our expert team
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-dark">
+        <div class="container-custom text-center">
+            <div class="max-w-3xl mx-auto animate-on-scroll">
+                <h2 class="text-white mb-6">Ready to Transform Your Business?</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Choose the perfect product for your needs or let us create a custom solution tailored to you.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="contact.html" class="btn btn-accent">
+                        Contact Sales
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <a href="about.html" class="btn btn-outline border-white text-white hover:bg-white hover:text-brand-primary">
+                        Learn About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-primary text-white py-12">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-brand rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">TV</span>
+                        </div>
+                        <span class="text-2xl font-bold">TechVista</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Innovative technology solutions for modern businesses.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                        <li><a href="contact.html#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex gap-4">
+                        <a href="https://twitter.com/techvista" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Twitter">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/techvista" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://github.com/techvista" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="GitHub">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 TechVista. All rights reserved. Built with TailwindCSS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
